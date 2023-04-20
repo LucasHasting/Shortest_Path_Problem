@@ -67,4 +67,4 @@ class FileConversion:
          output.write(f"\"{A}\" [shape = circle]\n")
          output.write(f"\"{B}\" [shape = circle]\n")
          output.write("\n")
-         output.write(f"\"{A}\" -- \"{B}\" [weight = {weight} color = \"{color}\"]\n")
+         output.write(f"\"{A}\" -- \"{B}\" [label = {weight},color = \"{color}\"]\n")
