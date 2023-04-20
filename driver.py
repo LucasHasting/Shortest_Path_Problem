@@ -2,7 +2,6 @@
 #https://www.geeksforgeeks.org/python-pil-image-open-method/s
 from PIL import Image
 from graphviz import Source
-import os
 from file_conversion import *
 
 def main():

@@ -2,10 +2,6 @@
 #https://graphviz.org/
 #https://www.w3schools.com/python/python_file_write.asp
 #https://www.geeksforgeeks.org/python-remove-all-values-from-a-list-present-in-other-list/
-import matplotlib.pyplot as plt
-from tkinter import *
-import networkx as nx
-
 class FileConversion:
     def convert_files(self, input_file, output_file):
         #open input file 
