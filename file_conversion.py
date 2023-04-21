@@ -23,15 +23,13 @@ class FileConversion:
         #split the shortest path from other paths
         self.split_paths(data_list)
 
-        #if the data is a string, convert to array
+        #add the non shortest path edges
         for i in self.non_shortest_path:
-            #add the current edge to the dot file
             self.convert_to_dot(i[0], i[1], i[2], output_file, "black")
             output_file.write("\n")
 
-        #if the data is a string, convert to array    
+        #add the shortest path edges
         for i in self.shortest_path:
-            #add the current edge to the dot file
             self.convert_to_dot(i[0], i[1], i[2], output_file, "red")
             output_file.write("\n")
 
