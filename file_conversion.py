@@ -3,14 +3,14 @@
 #https://www.w3schools.com/python/python_file_write.asp
 #https://www.geeksforgeeks.org/python-remove-all-values-from-a-list-present-in-other-list/
 class FileConversion:
-    def convert_files(self, input_file, output_file):
+    def convert_files(self, input_file, output_file, W=True):
         #open input file 
         input_file = open(f"./{input_file}", 'r')
         input_file = input_file.readlines()
 
         #open dot file
         output_file = open(f"./{output_file}", 'w')
-        output_file.write("graph road{\n")
+        output_file.write("digraph road{\n")
 
         data_list = []
         
@@ -25,12 +25,18 @@ class FileConversion:
 
         #add the non shortest path edges
         for i in self.non_shortest_path:
-            self.convert_to_dot(i[0], i[1], i[2], output_file, "black")
+            if (W):
+                self.convert_to_dot_weight(i[0], i[1], i[2], output_file, "black")
+            else:
+                self.convert_to_dot(i[0], i[1], output_file, "black")
             output_file.write("\n")
 
         #add the shortest path edges
         for i in self.shortest_path:
-            self.convert_to_dot(i[0], i[1], i[2], output_file, "red")
+            if (W):
+                self.convert_to_dot_weight(i[0], i[1], i[2], output_file, "red")
+            else:
+                self.convert_to_dot(i[0], i[1], output_file, "red")
             output_file.write("\n")
 
         #close the dot file
@@ -49,9 +55,18 @@ class FileConversion:
         path = [["g","h", 10.0],["h","i", 5.0]] 
         return path
 
-    def convert_to_dot(self, A, B, weight, output, color):
+    def convert_to_dot_weight(self, A, B, weight, output, color):
          #write an edge (and node) to the dot file 
          output.write(f"\"{A}\" [shape = circle]\n")
          output.write(f"\"{B}\" [shape = circle]\n")
          output.write("\n")
-         output.write(f"\"{A}\" -- \"{B}\" [label = {weight},color = \"{color}\"]\n")
+         output.write(f"\"{A}\" -> \"{B}\" [label = {weight},color = \"{color}\"]\n")
+         output.write(f"\"{B}\" -> \"{A}\" [color = \"{color}\"]\n")
+
+    def convert_to_dot(self, A, B, output, color):
+         #write an edge (and node) to the dot file 
+         output.write(f"\"{A}\" [shape = circle]\n")
+         output.write(f"\"{B}\" [shape = circle]\n")
+         output.write("\n")
+         output.write(f"\"{A}\" -> \"{B}\" [color = \"{color}\"]\n")
+         output.write(f"\"{B}\" -> \"{A}\" [color = \"{color}\"]\n")

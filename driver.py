@@ -9,20 +9,22 @@ def main():
     #name input and output files
     input_file = "data.txt" 
     output_file = "data.dot"
+    show_file(input_file, output_file, True)
+    
 
-    #convert files
+    
+def show_file(inputf, outputf, weight=True):
+    #convert files for unweighted
     Roads = FileConversion()
-    Roads.convert_files(input_file, output_file)
+    Roads.convert_files(inputf, outputf, weight)
 
     #set the path the dot file is in
-    path = f"./{output_file}"
+    path = f"./{outputf}"
 
     #read the dot file
     s = Source.from_file(path)
 
     #view the dot file
     s.view()
-
     
-
 main()
