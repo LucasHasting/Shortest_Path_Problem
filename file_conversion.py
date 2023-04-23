@@ -15,7 +15,7 @@ class FileConversion:
 
         #open dot file
         output_file = open(f"./{output_file}", 'w')
-        output_file.write("digraph road{\n")
+        output_file.write("graph road{\n")
 
         self.data_list = []
         used_list = []
@@ -25,7 +25,6 @@ class FileConversion:
             i = i.split(",")
             i[2] = float(i[2])
             self.data_list.append(i)
-
         
         for i in self.data_list:
             if ([i[1], i[0], i[2]] in used_list):
@@ -34,15 +33,15 @@ class FileConversion:
             used_list.append(i)
             
             if (W):
-                if self.shortest_path in i:
+                if [i[0],i[1]] in self.shortest_path:
                     self.convert_to_dot_weight(i[0], i[1], i[2], output_file, "red")
-                    self.convert_to_dot(i[1], i[0], output_file, "black")
                 else:
                     self.convert_to_dot_weight(i[0], i[1], i[2], output_file, "black")
-                    self.convert_to_dot(i[1], i[0], output_file, "black")
             else:
-                self.convert_to_dot(i[0], i[1], output_file, "black")
-                self.convert_to_dot(i[1], i[0], output_file, "black")
+                if [i[0],i[1]] in self.shortest_path:
+                    self.convert_to_dot(i[0], i[1], output_file, "red")
+                else:
+                    self.convert_to_dot(i[0], i[1], output_file, "black")
 
             output_file.write("\n")
 
@@ -60,7 +59,7 @@ class FileConversion:
     def ShortestPath(self, A, B):
         #A and B are both variables that store a node
         #example path
-        path = [["g","h"],["h","i"]] 
+        path = [["NWoodAvenue","NPineStreet"],["NPineStreet","starbucks"]] 
         return path
 
     def convert_to_dot_weight(self, A, B, weight, output, color):
@@ -68,14 +67,14 @@ class FileConversion:
          output.write(f"\"{A}\" [shape = circle]\n")
          output.write(f"\"{B}\" [shape = circle]\n")
          output.write("\n")
-         output.write(f"\"{A}\" -> \"{B}\" [label = {weight},color = \"{color}\"]\n")
+         output.write(f"\"{A}\" -- \"{B}\" [label = {weight},color = \"{color}\"]\n")
 
     def convert_to_dot(self, A, B, output, color):
          #write an edge (and node) to the dot file 
          output.write(f"\"{A}\" [shape = circle]\n")
          output.write(f"\"{B}\" [shape = circle]\n")
          output.write("\n")
-         output.write(f"\"{A}\" -> \"{B}\" [color = \"{color}\"]\n")
+         output.write(f"\"{A}\" -- \"{B}\" [color = \"{color}\"]\n")
 
     def check_nodes(self, node):
         for i in self.data_list:
