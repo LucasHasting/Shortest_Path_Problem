@@ -43,6 +43,8 @@ class FileConversion:
                 else:
                     self.convert_to_dot(i[0], i[1], output_file, "black")
 
+            self.data_list = used_list 
+
             output_file.write("\n")
 
         #close the dot file
@@ -59,6 +61,8 @@ class FileConversion:
     def ShortestPath(self, A, B):
         #A and B are both variables that store a node
         #example path
+        A = [i for i in self.data_list if A in i]
+        print(A)
         path = [["NWoodAvenue","NPineStreet"],["NPineStreet","starbucks"]] 
         return path
 
