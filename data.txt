@@ -48,6 +48,12 @@ NPineStreet,scienceBuilding,0.3
 scienceBuilding,NPineStreet,0.3
 NPineStreet,cobyHall,0.6
 cobyHall,NPineStreet,0.6
+1HarrsionPlaza,YMCA,2.6
+YMCA,1HarrisonPlaza,2.6
+1HarrisonPlaza,samsClub,4.7
+samsClub,1HarrisonPlaza,4.7
+samsClub,YMCA,2.9
+YMCA,samsClub,2.9
 
  
 
