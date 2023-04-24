@@ -5,11 +5,17 @@ from graphviz import Source
 from file_conversion import *
 
 def main():
+    #name input and output files
     input_file = "data.txt" 
     output_file = "data.dot"
+
+    #create file conversion object
     Roads = FileConversion()
+
+    #convert the file for a basic map
     Roads.convert_files(input_file, output_file, False)
 
+    #menu to select options
     while True:
             print("Options:")
             print("1. Road with miles")
@@ -21,7 +27,7 @@ def main():
             print()
 
             if choice == "1":
-                show_file(Roads, input_file, output_file, True)
+             show_file(Roads, input_file, output_file, True)
 
             elif choice == "2":
                 show_file(Roads, input_file, output_file, False)
@@ -32,7 +38,7 @@ def main():
                 if (vertex_a == 0):
                     continue
 
-                Roads.split_paths(vertex_a, vertex_b)
+                Roads.ShortestPath(vertex_a, vertex_b)
 
             elif choice == "4":
                 break
@@ -40,7 +46,7 @@ def main():
             else:
                 print("Invalid choice. Please try again.")
 
-    
+   
 def show_file(Road, inputf, outputf, weight=True):
     #convert files for unweighted
     Road.convert_files(inputf, outputf, weight)
@@ -54,17 +60,22 @@ def show_file(Road, inputf, outputf, weight=True):
     #view the dot file
     s.view()
 
+
 def get_check_node(Road):
+
+    #get the starting vertex and check if it exists
     vertex_a = input("What is the starting vertex: ")
     if (not Road.check_nodes(vertex_a)):
         print("invalid vertex")
         return 0, 0
 
+    #get the ending vertex and check if it exists
     vertex_b = input("What is the ending vertex: ")
     if (not Road.check_nodes(vertex_b)):
         print("invalid vertex")
         return 0, 0
-    
+
+    #return the verticies
     return vertex_a, vertex_b
     
 main()
