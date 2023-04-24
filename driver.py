@@ -10,10 +10,10 @@ def main():
     output_file = "data.dot"
 
     #create file conversion object
-    Roads = FileConversion()
+    Roads = FileConversion(input_file)
 
     #convert the file for a basic map
-    Roads.convert_files(input_file, output_file, False)
+    Roads.convert_files(output_file, False)
 
     #menu to select options
     while True:
@@ -49,7 +49,7 @@ def main():
    
 def show_file(Road, inputf, outputf, weight=True):
     #convert files for unweighted
-    Road.convert_files(inputf, outputf, weight)
+    Road.convert_files(outputf, weight)
 
     #set the path the dot file is in
     path = f"./{outputf}"
