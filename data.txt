@@ -13,7 +13,7 @@ McFarlandPark,1HarrisonPlaza,1.7
 1HarrisonPlaza,tacoBell,0.8
 tacoBell,1HarrisonPlaza,0.8
 NPineStreet,noalaHeights,1.2
-noalaHeights,NPineStrret,1.2
+noalaHeights,NPineStreet,1.2
 NPineStreet,starbucks,0.5
 starbucks,NPineStreet,0.5
 kellarHall,scienceBuilding,0.5
@@ -48,16 +48,3 @@ NPineStreet,scienceBuilding,0.3
 scienceBuilding,NPineStreet,0.3
 NPineStreet,cobyHall,0.6
 cobyHall,NPineStreet,0.6
-1HarrsionPlaza,YMCA,2.6
-YMCA,1HarrisonPlaza,2.6
-1HarrisonPlaza,samsClub,4.7
-samsClub,1HarrisonPlaza,4.7
-samsClub,YMCA,2.9
-YMCA,samsClub,2.9
-
- 
-
-
-
-
-
