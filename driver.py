@@ -15,7 +15,7 @@ def main():
     #convert the file for a basic map
     Roads.convert_files(output_file, False)
 
-    #menu to select options
+    #menu to select options - done by Krutivas
     while True:
             print("Options:")
             print("1. Road with miles")
@@ -46,9 +46,13 @@ def main():
             else:
                 print("Invalid choice. Please try again.")
 
-   
+'''
+Name: show_file
+Description: shows the file produced from the dot file
+Contribution: Lucas
+'''
 def show_file(Road, inputf, outputf, weight=True):
-    #convert files for unweighted
+    #convert files
     Road.convert_files(outputf, weight)
 
     #set the path the dot file is in
@@ -60,7 +64,11 @@ def show_file(Road, inputf, outputf, weight=True):
     #view the dot file
     s.view()
 
-
+'''
+Name: get_check_node
+Description: gets a vertex and verifies that it exists
+Contribution: Lucas
+'''
 def get_check_node(Road):
 
     #get the starting vertex and check if it exists
