@@ -1,6 +1,13 @@
-#https://www.geeksforgeeks.org/python-call-function-from-another-file/
-#https://www.geeksforgeeks.org/python-pil-image-open-method/s
-#https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file
+'''
+Names: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+Assignment: 11
+Date: 4/25/2023
+File Description: driver function to show a menu and convert files
+Sources------------------------------------------------------------------------------------
+https://www.geeksforgeeks.org/python-call-function-from-another-file/
+https://www.geeksforgeeks.org/python-pil-image-open-method/s
+https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file
+'''
 from graphviz import Source
 from file_conversion import *
 

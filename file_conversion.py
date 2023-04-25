@@ -1,7 +1,14 @@
-#https://www.stat.auckland.ac.nz/~paul/Reports/gridGraphviz/examples/example4.html
-#https://graphviz.org/
-#https://www.w3schools.com/python/python_file_write.asp
-#https://www.geeksforgeeks.org/python-remove-all-values-from-a-list-present-in-other-list/
+'''
+Names: Lucas Hasting, Ethan Nix, Krutivas Pradhan
+Assignment: 11
+Date: 4/25/2023
+File Description: converts a txt file met for grahs into a dot file to be viewed
+Sources------------------------------------------------------------------------------------
+https://www.stat.auckland.ac.nz/~paul/Reports/gridGraphviz/examples/example4.html
+https://graphviz.org/
+https://www.w3schools.com/python/python_file_write.asp
+https://www.geeksforgeeks.org/python-remove-all-values-from-a-list-present-in-other-list/
+'''
 import heapq
 
 class FileConversion:
