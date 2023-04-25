@@ -140,11 +140,10 @@ class FileConversion:
         path.append(A)
         path.reverse()
 
+        #turn the path into a 2D array to work with convert_files function
         self.shortest_path = []
         for i in range(len(path)-1):
             self.shortest_path.append([path[i], path[i+1]])
-
-        print(self.shortest_path)
 
 
     '''
