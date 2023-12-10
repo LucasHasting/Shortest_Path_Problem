@@ -13,7 +13,7 @@ from file_conversion import *
 
 def main():
     #name input and output files
-    input_file = "data.txt" 
+    input_file = "Test_Plan.txt" 
     output_file = "data.dot"
 
     #create file conversion object
