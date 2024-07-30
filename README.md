@@ -57,9 +57,9 @@ When selecting either of the first two options, the program will generate a pdf 
 
 ## Example
 
-![EXAMPLE](example1.png)  
-![EXAMPLE](example2.png)  
-![EXAMPLE](example3.png)  
+![EXAMPLE](examples/example1.png)  
+![EXAMPLE](examples/example2.png)  
+![EXAMPLE](examples/example3.png)  
 
 ## Program-Overview
 [driver.py](https://github.com/LucasHasting/Shortest_Path_Problem/blob/main/driver.py): contains the main driver of the program and is what needs to be executed.   
