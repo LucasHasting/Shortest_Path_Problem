@@ -25,13 +25,13 @@ pip install heapq
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/LucasHasting/IP-Subnet-Calculator.git
+    git clone https://github.com/LucasHasting/Shortest_Path_Problem.git
     ```
 
 2. Navigate to the project directory and execute the program:
 
     ```sh
-    cd IP-Subnet-Calculator
+    cd Shortest_Path_Problem
     py driver.py
     ```
 ### Option 2: without git
