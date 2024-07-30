@@ -8,7 +8,6 @@ https://www.geeksforgeeks.org/python-call-function-from-another-file/
 https://www.geeksforgeeks.org/python-pil-image-open-method/s
 https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file
 '''
-from graphviz import Source
 from file_conversion import *
 from extra_functions import *
 
