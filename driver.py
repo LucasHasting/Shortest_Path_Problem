@@ -10,6 +10,7 @@ https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-
 '''
 from graphviz import Source
 from file_conversion import *
+from extra_functions import *
 
 def main():
     #name input and output files
