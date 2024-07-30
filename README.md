@@ -49,6 +49,11 @@ pip install heapq
    ```
 
 ## Usage
+The program is a command line, menu based, user interface. By entering the number associated with an option it will perform a certain operation. The first item displays the road (graph) with the miles included and the second item displays the road without the miles. The third option allows you to enter a path (starting point and destination), while the 4th and last option allows you to exit/quit the program.
+
+When selecting a path it will ask for a starting vertex which is the starting point, then it will ask for a destination vertix which is the destination. It will then bring back the main menu and choosing either of the first two options will show the path highlighted red.
+
+When selecting either of the first two options, the program will generate a pdf of the road (graph) and will try to open software that can view the pdf (such as google chrome).
 
 ## Example
 
@@ -58,3 +63,4 @@ pip install heapq
 [driver.py](https://github.com/LucasHasting/Shortest_Path_Problem/blob/main/driver.py): contains the main driver of the program and is what needs to be executed.   
 [file_conversion.py](https://github.com/LucasHasting/Shortest_Path_Problem/blob/main/file_conversion.py): contains an object used for converting a graph file in txt format to dot format which is used by graphviz, this file also calculates the shortest path between two nodes.  
 [extra_functions.py](https://github.com/LucasHasting/Shortest_Path_Problem/blob/main/extra_functions.py): contains extra functions used in the driver.
+[Test_Plan.txt](https://github.com/LucasHasting/Shortest_Path_Problem/blob/main/Test_Plan.txt): contains the road(graph) information, it is formatted as source,destination,miles.
